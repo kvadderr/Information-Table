@@ -5,7 +5,8 @@ const open = require("open");
 
 //Подключение к БД
 const sqlite3 = require('sqlite3').verbose();
-let db = new sqlite3.Database('./config.db');
+const DBSOURCE = path.resolve(__dirname, 'config.db');
+let db = new sqlite3.Database(DBSOURCE);
 
 
 //Создаем приложение на основе экспресс
