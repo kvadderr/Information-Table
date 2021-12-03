@@ -12,7 +12,7 @@ const modal = document.getElementById('modal_container');
 
 
 
-const url = new URL("http://localhost:4000/jsonConfigFile");
+const url = new URL("https://web-app4.vercel.app/jsonConfigFile");
 var configFilesName;
 
 function showJSON(jsonData){
@@ -146,7 +146,7 @@ function createConfigFile(){
     }
 
 
-    fetch ('http://localhost:4000/jsonData', {
+    fetch ('https://web-app4.vercel.app/jsonData', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -174,7 +174,7 @@ fetch(url).then(function(response) {
 
 function changeConfigFile(){
 
-    const url = new URL("http://localhost:4000/jsonData?name="+SelectElement.value);
+    const url = new URL("https://web-app4.vercel.app/jsonData?name="+SelectElement.value);
 
     fetch(url).then(function(response) {
         response.json().then(function(data) {
@@ -190,7 +190,7 @@ function changeConfigFile(){
 
 function createMainFile(){
     
-    fetch ('http://localhost:4000/jsonConfigFile', {
+    fetch ('https://web-app4.vercel.app/jsonConfigFile', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

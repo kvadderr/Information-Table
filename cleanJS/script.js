@@ -1,12 +1,12 @@
 var jsonData = {};
 var jsonFileName;
-const url2 = new URL("http://localhost:4000/jsonFileName");
+const url2 = new URL("https://web-app4.vercel.app/jsonFileName");
 
 fetch(url2).then(function(response) {
     response.text().then(function(text) {
         console.log(text);
         jsonFileName = text;
-        const url = new URL("http://localhost:4000/jsonData?name="+jsonFileName);
+        const url = new URL("https://web-app4.vercel.app/jsonData?name="+jsonFileName);
         fetch(url).then(function(response) {
             response.json().then(function(json) {
                 jsonData = json;
