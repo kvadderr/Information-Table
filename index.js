@@ -106,6 +106,9 @@ app.use(express.static(__dirname));
 app.get('/', function(request, response){
   response.sendFile( path.resolve(__dirname, 'cleanJS/index.html'));
 });
+app.get('/config', function(request, response){
+  response.sendFile( path.resolve(__dirname, 'cleanJS/config.html'));
+});
 
 open("./cleanJS/index.html");
 open("./cleanJS/config.html");
