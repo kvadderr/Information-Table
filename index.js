@@ -102,7 +102,7 @@ app.get('/jsonConfigFile', function (request, response) {
   }); 
 
 });
-app.use(express.static(__dirname));
+app.use(express.static(__dirname,  'cleanJS'));
 app.get('/', function(request, response){
   response.sendFile( path.resolve(__dirname, 'cleanJS/index.html'));
 });
