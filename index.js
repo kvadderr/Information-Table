@@ -5,7 +5,7 @@ const open = require("open");
 
 //Подключение к БД
 const sqlite3 = require('sqlite3').verbose();
-let db = new sqlite3.Database('https://github.com/kvadderr/webApp/blob/main/config.db');
+let db = new sqlite3.Database('./config.db');
 
 
 //Создаем приложение на основе экспресс
