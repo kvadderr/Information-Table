@@ -103,6 +103,9 @@ app.get('/jsonConfigFile', function (request, response) {
 
 });
 
+app.get('/', function(request, response){
+  response.sendFile( path.resolve(__dirname, 'cleanJS/index.html'));
+});
 
 open("./cleanJS/index.html");
 open("./cleanJS/config.html");
