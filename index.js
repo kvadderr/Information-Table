@@ -2,10 +2,10 @@
 const express = require('express');
 const cors = require("cors");
 const open = require("open");
-
+const path = require('path');
 //Подключение к БД
 const sqlite3 = require('sqlite3').verbose();
-let db = new sqlite3.Database( path.join(__dirname, '/config.db'));
+let db = new sqlite3.Database( path.resolve(__dirname, 'config.db'));
 
 
 //Создаем приложение на основе экспресс
